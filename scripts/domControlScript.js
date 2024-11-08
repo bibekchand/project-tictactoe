@@ -58,14 +58,12 @@ function checkCondition(choice, first, second, computerChoice) {
   count++;
   Gameboard.enterChoice(choice, first, second);
   if (Gameboard.checkGameState(choice) == true) {
-    console.log("I am in player")
     dialog.textContent = `${choice} wins`;
     dialog.showModal();
     gameOver = true;
   }
   setComputerIndex(computerChoice);
   if (Gameboard.checkGameState(computerChoice) == true && gameOver == false) {
-    console.log("computer wins")
     dialog.textContent = `${computerChoice} wins`;
     dialog.showModal();
     gameOver = true;
