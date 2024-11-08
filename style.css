@@ -1,0 +1,95 @@
+*:not(dialog){
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.buttons{
+    height: 10vh;
+    color:white;
+    display:flex;
+    gap:40px;
+    justify-content: center;
+    padding-top:10px;
+    
+}
+button{
+    border-radius:8px;
+    color:white;
+    font:inherit;
+    background-color: inherit;
+    border:0;
+    height: 40px;
+    transition:.2s;
+    width:80px;
+    font-size:1.5rem;
+}
+button:hover{
+    
+    background-color:rgb(60, 59, 59) ;
+    cursor:pointer;
+}
+.game{
+    height: 80vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width:400px;
+    height: 400px;
+    display:grid;
+    grid-template:1fr 1fr 1fr/ 1fr 1fr 1fr;
+}
+.container > *{
+    color:white;
+    font-size:70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:2px solid rgb(235, 228, 228);
+    transition: .3s;
+}
+.container > div:first-child{
+    border-left:0;
+    border-top:0;
+}
+.container > div:nth-child(2){
+    border-top:0;
+}
+.container > div:nth-child(3){
+    border-right:0;
+    border-top:0;
+}
+.container > div:nth-child(4){
+    border-left:0;
+}
+.container> div:nth-child(6){
+    border-right:0;
+}
+.container > div:nth-child(7){
+    border-left:0;
+    border-bottom:0;
+}
+.container > div:nth-child(8){
+    border-bottom:0;
+}
+.container > div:last-child{
+    border-bottom:0;
+    border-right:0;
+}
+.container>div:hover{
+    background-color: rgb(48, 46, 46);
+    cursor:pointer;
+}
+dialog{
+    font-size:80px;
+}
+
+::backdrop{
+    backdrop-filter: blur(5px);
+}
+.reset-button{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
